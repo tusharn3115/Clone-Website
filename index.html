@@ -6,6 +6,7 @@
     <title>Clone Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./responsive.css">
   </head>
   <body>
 
@@ -29,7 +30,7 @@
         <a href="#" class="logo">
           <img src="./assets/asset 0.png" alt="Company Logo" />
         </a>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
           <ul class="flex">
             <li><a href="#" class="hover-link">Product</a></li>
             <li><a href="#" class="hover-link">Customer</a></li>
@@ -39,6 +40,9 @@
             <li><a href="#" class="hover-link primary-btn">Sign-up</a></li>
           </ul>
         </div>
+        <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </a>
       </div>
     </nav>
 
@@ -161,7 +165,7 @@
     <section class="big-feature-section">
       <div
         class="container flex big-feature-container"
-        style="flex-direction: row-reverse"
+        id="big-feature-section2"
       >
         <div class="feature-img">
           <img src="./assets/asset 20.png" alt="" />
@@ -290,5 +294,16 @@
       src="https://kit.fontawesome.com/de9188ed33.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const toggleBtn = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      })
+    </script>
+
+    
   </body>
 </html>
